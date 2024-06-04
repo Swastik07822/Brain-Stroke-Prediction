@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,  rgb(255, 255, 255),rgb(255, 255, 255));
+    color: #007bff;
+    display:inline;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    gap: 10px;
+    
+}
+
+img{
+
+    float: left;
+    margin-left: 5px;
+}
+
+.container-2 {
+
+    
+
+    margin-left: 0px;
+    color:#020202;
+    margin-top: 100px;
+    width:398px;
+    height: 600px;
+    text-align: left;
+    
+
+}
+
+
+.container {
+    background-color: #fff;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:400px;
+    columns: 2;
+    height: 410px;
+    font-size: medium;
+    z-index: 1;
+    color: #000000;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #007bff;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #007bff;
+}
+
+select{
+
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #007bff;
+
+}
+
+button {
+
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+    margin-left: 0px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div{
+
+    display:block;
+
+}
+
+.top-center {
+    position: absolute;
+    top: 10px; /* Adjust this value to control the distance from the top */
+    left: 50%;
+    color:#007bff;
+    transform: translateX(-50%);
+    /*background-color: rgb(255, 255, 255); /* Optional: for visibility */
+    /*padding: 10px; /* Optional: for padding */
+    /*border: 1px solid #000; /* Optional: for border */
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for shadow */
+    border-radius: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}a{
+
+    text-decoration: none;
+    font-size:xx-large;
+    color: #1560e2;
+    gap: 10px;
+    
+}
+
+p{
+
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+
+
+
+
+

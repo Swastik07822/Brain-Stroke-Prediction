@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icons/icon.svg') }}" type="image/x-icon">
+    <title>Knn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+
+            font-family: "Roboto", sans-serif;
+            background: linear-gradient(to right,  rgb(255, 255, 255),rgb(255, 255, 255));
+            background:#becef1a1;
+        }
+
+        .video-container {
+            
+            border: 5px solid #333;
+            padding: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .video {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container" style="margin-left: 300px; margin-top: 50px;">
+        <video  class="video" width="640" height="360" controls>
+            <source src="{{ url_for('static', filename='videos/knn.mp4') }}" type="video/mp4">
+            
+        </video>
+        <div class="caption"></div>
+
+    </div>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+
+
+    <div>
+
+        K-Nearest Neighbors (KNN) is a straightforward yet effective supervised machine learning algorithm used for both classification and regression tasks. The core principle of KNN is to classify a data point based on the majority class of its nearest neighbors or predict a value based on the average of its neighbors' values. During prediction, the algorithm calculates the distance between the new data point and all training points, then identifies the 'K' closest neighbors. The simplicity of KNN lies in its non-parametric nature, meaning it makes no assumptions about the underlying data distribution, and its lazy learning approach, where there is no explicit training phase but rather a direct prediction based on stored data. While KNN is easy to implement and understand, it can be computationally intensive, particularly with large datasets, due to the need to compute distances for all points. The choice of 'K' is critical; too small a 'K' can lead to overfitting, while too large a 'K' can smooth out important patterns. Despite its limitations, KNN is widely used in applications like pattern recognition, recommendation systems, and medical diagnosis due to its robustness and versatility.
+    </div>
+
+</body></html>

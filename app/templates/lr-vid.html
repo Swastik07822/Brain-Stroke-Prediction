@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Regression</title>
+    <link rel="icon" href="{{ url_for('static', filename='icons/icon.svg') }}" type="image/x-icon">
+    <style>
+
+        body{
+
+            background: linear-gradient(to right,  rgb(255, 255, 255),rgb(255, 255, 255));
+            background:#becef1a1;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .video-container {
+            
+            border: 5px solid #333;
+            padding: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .video {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container" style="margin-left: 300px; margin-top: 50px;">
+        <video  class="video" width="640" height="360" controls>
+            <source src="{{ url_for('static', filename='videos/logistic-regression.mp4') }}" type="video/mp4">
+            
+        </video>
+        <div class="caption"></div>
+
+    </div>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <div>
+
+        Logistic Regression is a fundamental and widely used supervised machine learning algorithm designed for binary classification tasks. It models the probability that a given input belongs to a particular class by applying the logistic function to a linear combination of input features. The logistic function, also known as the sigmoid function, maps predicted values to probabilities that range between 0 and 1, making it ideal for classification problems where the outcomes are discrete. The algorithm estimates the parameters of the model using maximum likelihood estimation, aiming to find the best-fitting model that describes the relationship between the dependent binary variable and one or more independent variables. Logistic Regression is prized for its simplicity, interpretability, and efficiency in terms of computation, making it suitable for large datasets. It also provides valuable insights into the influence of each feature on the prediction through the model's coefficients. Despite its name, Logistic Regression is a classification algorithm and should not be confused with linear regression. Its assumptions include a linear relationship between the independent variables and the log-odds of the dependent variable, and it performs well when these assumptions hold true. Logistic Regression is commonly used in fields like medicine for disease prediction, marketing for customer segmentation, and social sciences for research studies due to its clarity and robustness.
+
+        
+    </div>
+
+</body></html>

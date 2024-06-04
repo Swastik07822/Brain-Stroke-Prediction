@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icons/icon.svg') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Decision Tree</title>
+    <style>
+
+        body{
+
+            font-family: "Roboto", sans-serif;
+            background: linear-gradient(to right,  rgb(255, 255, 255),rgb(255, 255, 255));
+            background:#becef1a1;
+
+
+        }
+
+        .video-container {
+            
+            border: 5px solid #333;
+            padding: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .video {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container" style="margin-left: 300px; margin-top: 50px;">
+        <video  class="video" width="640" height="360" controls>
+            <source src="{{ url_for('static', filename='videos/decision-tree.mp4') }}" type="video/mp4">
+            
+        </video>
+        <div class="caption"></div>
+
+    </div>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <div>
+
+        A Decision Tree is a popular and intuitive supervised machine learning algorithm used for both classification and regression tasks. It mimics the human decision-making process by breaking down a dataset into smaller subsets while simultaneously developing an associated decision tree incrementally. At each node of the tree, the algorithm selects the feature that best splits the data into distinct classes based on a criterion such as Gini impurity, entropy, or mean squared error. This splitting process continues recursively, forming a tree structure with branches representing decision rules and leaf nodes representing the final outcomes or predictions.
+
+The simplicity and interpretability of decision trees make them highly useful for understanding the underlying structure of the data and for making decisions that can be easily visualized and explained. However, decision trees can be prone to overfitting, especially with noisy data, as they might create overly complex trees that capture noise rather than the underlying data pattern. Techniques such as pruning, setting a maximum depth, or requiring a minimum number of samples per leaf can help mitigate overfitting.
+
+Despite their tendency to overfit, decision trees are versatile and can handle both numerical and categorical data. They are used in various fields, including finance for credit risk analysis, healthcare for diagnosing diseases, and marketing for customer segmentation. Moreover, decision trees serve as the foundation for more advanced ensemble methods like Random Forest and Gradient Boosting, which combine multiple trees to enhance predictive performance and robustness.
+
+
+    </div>
+
+</body></html>

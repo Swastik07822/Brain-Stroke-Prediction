@@ -1,0 +1,301 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='icons/icon.svg') }}" type="image/x-icon">
+    <title>Brain Stroke Prediction</title>
+</head>
+
+<style> 
+    
+
+    body{
+        background:#becef1a1;
+        font-family: "Roboto", sans-serif;
+
+    }
+
+
+    .overlap-container { 
+        position: relative; 
+        margin: 10px auto; 
+        max-width: 820px; 
+        height: 60vh; 
+        overflow: hidden; 
+        border: 2px solid black; 
+        background-color: #becef1a1; 
+        border-radius: 20px; 
+        box-shadow: 5px 5px 10px gray; 
+    } 
+
+    .block { 
+        position: absolute; 
+        width: 300px; 
+        height: 110px; 
+        padding: 20px 30px; 
+        background-color: #3498db; 
+        color: #fff; 
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.3s ease-in-out; 
+        margin-top: 100px;
+    } 
+
+    .block:hover { 
+        transform: translateX(20px) translateY(-20px); 
+        z-index: 1; 
+        box-shadow: 10px 5px 10px rgb(95, 92, 92); 
+        height: 120px; 
+    } 
+
+    .block:nth-child(2) { 
+        background-color: #e74c3c; 
+    } 
+
+    .block:nth-child(3) { 
+        background-color: #2ecc71; 
+    } 
+
+    .block:nth-child(4) { 
+        background-color: #e656de; 
+    } 
+
+    .block-content { 
+        margin-top: 10px; 
+    }
+    
+
+</style> 
+
+
+<body>
+<div class="container-2" style="color: #007bff; float: left;">
+
+
+
+    <p> 
+
+            <a href="{{ url_for('random_forest') }}" style="font-size: xx-large;"  target="_blank"> Random Forest </a>
+
+            <br>
+            <br>
+
+            <a  href="{{ url_for('lr') }}" style="font-size: xx-large; color: black;"  target="_blank"> Logistic Regression</a>
+
+            <br>
+            <br>
+
+            <a href="{{ url_for('knn') }}" style="font-size: xx-large;"  target="_blank"> KNN </a>
+
+            <br>
+            <br>
+
+            <a href="{{ url_for('dec_tree') }}" style="font-size: xx-large;  color: black;"  target="_blank"> Decision Tree </a>
+
+            <br>
+            <br>
+
+            <a href="{{ url_for('svm') }}" style="font-size: xx-large;"  target="_blank"> SVM </a>
+
+   
+    
+    </p>
+
+    
+
+</div>
+<!---->
+
+<br>
+
+<br>
+
+
+<div class="top-center" style="color: currentColor;">
+    <h1><img  style = "width:70px; height:70px;"src="{{ url_for('static', filename='images/brain.png') }}" alt="brain-logo" /> &nbsp;Stroke Prediction</h1>
+
+</div>
+
+<div class="container">
+
+<form action="{{ url_for('predict') }}" method="post">
+
+    <label for="dropdown">Model</label>
+    <select id="model" name="model" required>
+        <option value="svm">SVM</option>
+        <option value="knn">KNN</option>
+        <option value="dec-tree">Decision Tree</option>
+        <option value="random-forest">Random Forest</option>
+        <option value="logistic-reg">Logostic Regression</option>
+    </select>
+
+    <label for="dropdown">Gender</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <label for="age">Age</label>
+    <input type="number" name="age" required>
+
+    <label for="hypertension">Hypertension</label>
+    <select id="hypertension" name="hypertension" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+
+    <label for="heart_disease">Heart Diesease</label>
+    <select id="heart_disease" name="heart_disease" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+
+    <label for="married">Married</label>
+    <select id="married" name="married" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+
+    <label for="avg_glucose_level">Avg Glucose Level</label>
+    <input type="number" name="avg_glucose_level" required>
+
+
+    <label for="bmi">BMI</label>
+    <input type="number" name="bmi" required>
+
+    <label for="Residence_type">Residence - Type</label>
+    <select id="Residence_type" name="Residence_type" required>
+        <option value="Urban">Urban</option>
+        <option value="Rural">Rural</option>
+    </select>
+
+    <label for="work_type">Work - Type</label>
+    <select id="work_type" name="work_type" required>
+        <option value="private">Private</option>
+        <option value="Govt">Government</option>
+        <option value="self">Self-Employed</option>
+        <option value="child">Children</option>
+        <option value="never_worked">Never-Worked</option>
+    </select>
+
+    <label for="smoking_status">Smoking - Status</label>
+    <select id="smoking_status" name="smoking_status" required>
+        <option value="formerly-smoking">Formerly-Smoking</option>
+        <option value="Never-Smoked">Never-Smoked</option>
+        <option value="Smokes">Smokes</option>
+        <option value="unknown">Unknown</option>
+    </select>
+
+    <br>
+    <button type="submit">Predict</button>
+    
+</form>
+
+</div>
+
+<br>
+
+<br>
+
+
+<div class="container-2 box">
+
+   
+    <img src="https://picsum.photos/800/400" style="float: left; width: 400px; height: 400px; margin-left: 50px; " alt="img"> 
+ 
+    <p style="margin-left: 500px; width: 700px; text-align:left; font-size: xx-large; color:black"><br><br>Brain stroke remains a significant global health challenge. Addressing this issue requires a comprehensive approach involving prevention, early detection, timely treatment, and effective rehabilitation. Through coordinated efforts, it is possible to reduce the incidence and impact of stroke, ultimately saving lives and improving the quality of life for stroke survivors worldwide.
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+<footer>
+
+
+
+
+<div class="conatiner-2">
+
+    
+    <p> 
+
+        <a  href="https://github.com/Swastik07822/Machine-Learning/blob/main/Project.ipynb" target="_blank">EDA</a>
+
+        <br>
+        <br>
+
+        <a style=" color: black; font-size: xx-large; " onclick="calculateBMI();">BMI</a>
+
+        
+
+        <br>
+        <br>
+
+        <a  href="{{ url_for('reports_two') }}" target="_blank">Data Report - 1</a>
+
+        <br>
+        <br>
+
+        <a  href="{{ url_for('reports_three') }}" style="color: black;" target="_blank">Data Report - 2</a>
+
+        <br>
+        <br>
+
+    </p>
+
+</div>
+
+</footer>
+
+
+
+<script>
+    // Function to calculate BMI
+    function calculateBMI() {
+        // Prompt the user to enter height in cm
+        var height = parseFloat(prompt("Enter your height in cm:"));
+
+        // Prompt the user to enter weight in kilograms
+        var weight = parseFloat(prompt("Enter your weight in kilograms:"));
+
+        // Check if the inputs are valid numbers
+        if (isNaN(height) || isNaN(weight)) {
+            alert("Please enter valid numbers for height and weight.");
+            return; // Exit the function if inputs are invalid
+        }
+
+        // Calculate BMI
+        height = height / 100;
+
+        var bmi = weight / (height * height);
+
+        
+
+        // Display the result using alert
+        alert("Your BMI is: " + bmi.toFixed(2));
+    }
+
+    // Call the calculateBMI function when the page loads
+    //calculateBMI();
+</script>
+
+
+</body>
+
+
+</html>
+

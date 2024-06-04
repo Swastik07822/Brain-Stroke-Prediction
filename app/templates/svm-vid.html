@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icons/icon.svg') }}" type="image/x-icon">
+    <title>SVM</title>
+    <style>
+
+        body{
+
+            background: linear-gradient(to right,  rgb(255, 255, 255),rgb(255, 255, 255));
+            background:#becef1a1;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .video-container {
+            
+            border: 5px solid #333;
+            padding: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .video {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container" style="margin-left: 300px; margin-top: 50px;">
+        <video  class="video" width="640" height="360" controls>
+            <source src="{{ url_for('static', filename='videos/svm.mp4') }}" type="video/mp4">
+            
+        </video>
+        <div class="caption"></div>
+
+    </div>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <br>
+
+    <div>
+
+        Support Vector Machine (SVM) is a powerful supervised machine learning algorithm widely used for both classification and regression tasks, though it is primarily employed in classification problems. The core idea behind SVM is to find the optimal hyperplane that best separates the data into different classes. In cases where the data is not linearly separable, SVM uses a technique called the kernel trick to transform the input features into higher dimensions where a hyperplane can be used to separate the classes. This makes SVM a versatile tool capable of handling both linear and non-linear classification problems.
+
+        SVM works by identifying the support vectors, which are the data points that are closest to the hyperplane and play a critical role in defining the position and orientation of the hyperplane. The algorithm maximizes the margin, which is the distance between the hyperplane and the nearest data points from either class. This maximization helps improve the model's generalization ability and robustness to unseen data.
+        
+        One of the significant strengths of SVM is its effectiveness in high-dimensional spaces, making it suitable for applications with a large number of features. Additionally, it is memory efficient since it primarily uses a subset of the training data, the support vectors, to make decisions. However, SVM can be computationally intensive, particularly with large datasets, and requires careful tuning of parameters such as the regularization parameter (C) and the choice of kernel.
+        
+        SVM is widely used in various domains, including image and text classification, bioinformatics for protein classification, and hand-written digit recognition. Its ability to handle complex relationships in the data and provide high accuracy makes SVM a popular choice among machine learning practitioners.
+        
+    </div>
+
+</body></html>
